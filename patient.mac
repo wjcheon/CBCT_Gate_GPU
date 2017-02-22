@@ -15,5 +15,8 @@
 
 /gate/actor/addActor GPUTransTomoActor gpuactor
 /gate/actor/gpuactor/attachTo hof_brain
-/gate/actor/gpuactor/setGPUDeviceID 0
-/gate/actor/gpuactor/setGPUBufferSize 10000
+#/gate/actor/gpuactor/cudaDevice 0
+#/gate/actor/gpuactor/setGPUBufferSize 10000
+
+/gate/actor/gpuactor/cudaDevice 1
+/gate/output/spectGPU/bufferParticleEntry 20000000
