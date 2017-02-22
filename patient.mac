@@ -1,8 +1,10 @@
 
 # Phantom
+
+
 /gate/world/daughters/name hof_brain
 /gate/world/daughters/insert ImageRegularParametrisedVolume
-/gate/hof_brain/geometry/setImage data/Realskull.h33
+/gate/hof_brain/geometry/setImage data/brain_phantom.h33
 /gate/hof_brain/geometry/setRangeToMaterialFile data/attenuation_range.dat
 /gate/hof_brain/placement/setTranslation 0. 0. 0. mm
 /gate/hof_brain/placement/setRotationAxis 1 0 0
@@ -10,3 +12,8 @@
 /gate/hof_brain/setSkipEqualMaterials 0
 /gate/hof_brain/attachPhantomSD
 
+
+/gate/actor/addActor GPUTransTomoActor gpuactor
+/gate/actor/gpuactor/attachTo hof_brain
+/gate/actor/gpuactor/setGPUDeviceID 0
+/gate/actor/gpuactor/setGPUBufferSize 10000
